@@ -1,0 +1,729 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+
+
+
+
+    <title>Document</title>
+    <style>
+
+        @media  screen and (max-width:600px) {
+            .about-img{
+                height:20vw !important;
+                width:20vw !important;
+            }
+
+            .about{
+                font-size: 2vw;
+            }
+
+             .product-name-2{
+           font-size: 1.5vw;
+           text-align: center;
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+            
+        }
+
+        .our-menu>h1{
+            font-size: 2.5vw;
+        }
+
+
+        .banner-text{
+            font-size: 3vw !important;
+            
+        }
+
+        .banner-text h1{
+            font-size: 3vw !important;
+        }
+
+        .banner-img>img{
+            height:35vw !important;
+            
+        }
+
+        .navbar-2{
+            font-size: 1.5vw !important;
+        }
+
+        
+
+
+        
+
+
+            
+
+
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            overflow-x: hidden;
+        }
+        .navbar{
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar>img{
+            height:4vw;
+        }
+
+        .navbar>h1{
+            font-size:2vw;
+        }
+
+        .navbar-2>h1{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container{
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 0.01vw solid grey;
+            
+
+        }
+
+        .navbar-2{
+            display: flex;
+            align-items: center;
+            gap:5vw;
+            font-size: 1vw;
+            padding-right:1.5vw;
+        }
+
+        .banner{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size:1.5vw;
+            padding-top: 5vw;
+            padding-bottom: 20vw;
+
+        }
+        .banner-img>img{
+            height:30vw;
+            padding-right:7vw;
+
+        }
+
+        .banner-text{
+            padding-left: 7vw;
+        }
+
+        .banner-text>h1{
+            font-size: 2vw;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            
+        }
+
+        .banner-text>h2{
+            font-family:oblique;
+            padding-bottom: 2vw;
+        }
+
+        .banner-text>p{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1.1vw;
+        }
+
+        .para{
+            padding-top: 2vw;
+        }
+
+        .para-2{
+            padding-bottom: 2vw;
+        }
+
+        .btn{
+            background-color: brown;
+            color:white;
+            border-radius: 2vw;
+            height:3vw;
+            width:9vw;
+            font-size:0.95vw;
+        }
+
+        .about-us{
+            background-color: #f8f5f5;
+        }
+
+        .about-us>img{
+            border:2px solid;
+            border-radius: 50%;
+        }
+
+        .para{
+            width:40vw;
+        }
+
+        .about-us{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 5vw;
+            padding-top: 10vw;
+
+        }
+
+        .about-us>h1{
+            text-align: center;
+        }
+
+        
+
+        .menu-img{
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color:rgb(49, 8, 8);
+            padding-top: 4vw;
+            
+        }
+
+        .menu-img>img{
+            height:18vw;
+
+            /* border:2px solid red; */
+        }
+
+
+
+       .menu-text{
+            text-align: center;
+            color:white;
+            
+        }
+
+        .our-menu{
+            background-color: rgb(48, 18, 18);
+            margin-top: 8vw;
+        }
+
+
+        .product-name
+        {
+            font-size: 1.3vw;
+            display: flex;
+            text-align: center;
+            justify-content: space-around;
+            padding-top: 2vw;
+            /* gap:18vw; */
+        }
+
+        .menu-container{
+            background-color: rgb(48, 18, 18);
+            color:white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .product-name>div>h3{
+            padding-bottom: 1.5vw;
+        }
+
+
+        .product-name-2{
+            display:flex;
+            justify-content: space-around;
+            background-color: rgb(48, 18, 18);
+            color:white;
+            padding-bottom: 12vw;
+
+            
+        }
+
+        .product-name-2>div>h3{
+            padding-bottom: 2vw;
+            font-size:1.5vw;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+
+        .product-name-2>div>p{
+            font-size: 1.4vw;
+            text-align: center;
+        }
+
+        .product-name-2>div{
+            padding-top: 3vw;
+        }
+
+        .testinomials-img{
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+            padding-top: 5vw;
+            margin-top: 2vw;
+            
+        }
+
+        .testinomials-img>img{
+            height:10vw;
+            border-radius: 50%;
+        }
+
+        .testinomials>div>h3{
+            padding-bottom:2vw;
+            font-size:1.5vw;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+
+        .testinomials>div>p{
+           font-size: 1.4vw;
+            text-align: center;
+        }
+
+        .testinomials{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+
+        }
+        .gallery{
+            display: flex;
+            flex-direction: column;
+            gap:4vw;
+            padding-bottom: 10vw;
+        }
+
+        
+
+        .gallery-img-1
+        {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            
+        }
+
+        .gallery-img-2{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .gallery-img-1>img,.gallery-img-2>img{
+            height: 14vw;
+            width:20vw;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-img-1>img:hover,.gallery-img-2>img:hover{
+            transform: scale(1.1);
+        }
+        .contact{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border:2px solid;
+        }
+
+        .contact-section-1{
+            font-size: 1.2vw;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+
+        .contact-section-2{
+            font-size: 2vw;
+            display: flex;
+            flex-direction: column;
+            gap:1vw;
+
+        }
+
+        .navbar-2>h3{
+           transition: all 0.3s ease;  
+           cursor: pointer;
+
+        }
+
+
+        .navbar-2>h3:hover{
+            transform: scale(1);
+            background-color: black;
+            color:white;
+            border-radius: 10px;
+        }
+
+        #baner>button{
+            cursor:pointer;
+        }
+
+       .navbar-2 a {
+    text-decoration: none;
+    color: black;
+}
+
+
+      
+    </style>
+</head>
+<body>
+
+       <p>
+        <?php
+           echo "hi my name is sonu kr";
+        ?>
+    </p>
+    <div id="nav" style="position: relative;" class="container">
+        <div class="navbar">
+            <img id="cofe" src="coffee-icon.png" alt="" style="position: relative;">
+            <h1>Coffee</h1>
+            
+        </div>
+
+
+        <div class="navbar-2">
+            <h3 id="home">Home</h3>
+            <h3 id="about">About</h3>
+            <h3 id="menu">Menu</h3>
+            <h3 id="testinomials">Testinomials</h3>
+            <h3 id="gallery">Gallery</h3>
+            <a href="login.html"><h3 id="contact">Contact</h3></a>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div id="baner" style="position:relative" class="banner-text">
+            <h2>Best Coffee</h2>
+            <h1>Make your day great with our</h1>
+            <h1>special coffee!</h1>
+            <p class="para">welcome to our coffee paradise,where every bean tells</p>
+            <p class="para-2">a story and every cup sparks joy.</p>
+            <button class="btn ">Order Now</button>
+            <button class="btn">Contact Us</button>
+        </div>
+        
+
+
+        <div class="banner-img">
+            <img id="cofe-2"src="coffee-banner.png" alt="" style="position: relative;">
+        </div>
+    </div>
+
+
+    <div class="about-us">
+        <img class="about-img"src="about-image.jpg" alt="">
+
+        <div class="about">
+            <h1>ABOUT US</h1>
+        <p class="para">
+  Welcome to our coffee paradise, where every bean tells a story and every cup sparks joy. 
+  Enjoy the rich aroma, the perfect roast, and the taste that brings people together. 
+  We believe in quality, passion, and creating memories one cup at a time.
+</p>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- our menu -->
+<div class="menu-container">
+
+  
+    <div class="our-menu">
+             <h1 class="menu-text">OUR MENU</h1>
+        <div class="menu-img"class="menu-img1" style="position: relative;">
+            <img src="coffee-menu.png" alt="">
+            <img src="icecream-menu.png" alt="">
+            <img src="juice-menu.png" alt="">
+        </div>
+    </div>
+
+
+    <div class="product-name">
+
+
+        <div>
+            <h3>Hot Beverages</h3>
+            <p>wide range of streaming hot </p>
+            <p>coffee to make you fresh and light</p>
+        </div>
+
+
+        <div>
+            <h3>Hot Beverages</h3>
+            <p>wide range of streaming hot </p>
+            <p>coffee to make you fresh and light</p>
+        </div>
+
+
+        <div>
+            <h3>Hot Beverages</h3>
+            <p>wide range of streaming hot </p>
+            <p>coffee to make you fresh and light</p>
+        </div>
+
+    </div>
+</div>
+
+
+
+<!-- 2nd row -->
+
+  <div >
+
+      <div class="menu-img" class="menu-img2"style="position: relative">
+            <img src="small-burger.png" alt="">
+            <img src="desert.png" alt="">
+            <img src="burger.png" alt="">
+        </div>
+
+        
+
+    </div>
+
+
+    <div class="product-name-2">
+
+    
+    <div>
+            <h3>Hot Beverages</h3>
+            <p>wide range of streaming hot </p>
+            <p>coffee to make you fresh and light</p>
+        </div>
+
+
+        <div>
+            <h3>Hot Beverages</h3>
+            <p>wide range of streaming hot </p>
+            <p>coffee to make you fresh and light</p>
+        </div>
+
+
+        <div>
+            <h3>Hot Beverages</h3>
+            <p>wide range of streaming hot </p>
+            <p>coffee to make you fresh and light</p>
+        </div>
+      </div>  
+
+
+
+      <!-- testominials -->
+   <h1 style="text-align: center;font-size: 2vw;">TESTIMONIALS</h1>
+ <div class="testinomials-container" style="height:40vw">
+
+ 
+      <div class="testinomials-section">
+            <div class="testinomials-img">
+                <img src="user-1.jpg" alt="">
+                <img src="user-2.jpg" alt="">
+                <img src="user-3.jpg" alt="">
+            </div>
+           
+           
+      </div>
+
+      <div class="testinomials">
+         <div>
+            <h3>Sarah Johnson</h3>
+            <p>"Loved the French roast, Perfectly</p>
+            <p>balanced and rich, will order again!"</p>
+         </div>
+
+         <div>
+            <h3>Sarah Johnson</h3>
+            <p>"Loved the French roast, Perfectly</p>
+            <p>balanced and rich, will order again!"</p>
+         </div>
+
+
+         <div>
+            <h3>Sarah Johnson</h3>
+            <p>"Loved the French roast, Perfectly</p>
+            <p>balanced and rich, will order again!"</p>
+         </div>
+
+      </div>
+   </div>     
+
+
+
+
+       <!-- gallery-section --> -->
+<h2 style="text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;padding-bottom: 4vw;">GALLERY</h2>
+ <div class="gallery">
+
+        <div class="gallery-img-1">
+        <img src="gallery-1.jpg" alt="">
+        <img src="gallery-2.jpg" alt="">
+        <img src="gallery-3.jpg" alt="">
+        </div>
+
+
+
+
+        <div class="gallery-img-2">       
+        <img src="gallery-4.jpg" alt="">
+        <img src="gallery-5.jpg" alt="">
+        <img src="gallery-6.jpg" alt="">
+      </div> 
+</div> 
+
+  </div>
+
+
+  <!-- script -->
+
+  <script>
+  let mm = gsap.matchMedia();
+
+  mm.add("(max-width: 600px)", () =>
+   {
+    // Poco M3 ya chhote screen ke liye
+
+
+    gsap.from("#cofe-2", {
+      x: 300,
+      duration: 2,
+    //   backgroundColor: "blue"
+    });
+
+      gsap.from("#nav", {
+      y:-200,
+      duration: 1.2,
+    //   backgroundColor: "green"
+    });
+
+
+    
+
+      gsap.from("#baner *", {
+     y:200,
+     duration:2,
+     opacity:0.3 ,
+    //  delay:2
+    });
+
+    
+    gsap.from(".menu-img>img",{
+    
+       scrollTrigger: {
+    trigger: ".menu-img",
+    start: "top 80%",
+    toggleActions: "play none none none",
+  },
+  y: 100,
+  opacity: 0,
+  duration: 1,
+  stagger: 0.2,
+  ease: "power2.out"
+    });
+
+
+    
+
+
+
+    
+
+  });
+
+  mm.add("(min-width: 601px)", () => {
+    // Laptop/Desktop ke liye
+
+     gsap.from("#cofe-2", {
+      x: 300,
+      duration: 2,
+    //   backgroundColor: "blue"
+    }); 
+
+    gsap.from("#nav", {
+      y:-200,
+      duration: 1.2,
+    //   backgroundColor: "green"
+    });
+  
+      gsap.from("#baner *", {
+     y:200,
+     duration:2,
+     opacity:0.3  
+    });
+
+
+    gsap.from(".menu-img>img",{
+    
+       scrollTrigger: {
+    trigger: ".menu-img",
+    start: "top 80%",
+    toggleActions: "play none none none",
+  },
+  y: 100,
+  opacity: 0,
+  duration: 1,
+  stagger: 0.2,
+  ease: "power2.out"
+    });
+
+
+
+    // 
+
+  
+    
+  });
+
+  document.getElementById("about").addEventListener("click", function () {
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: ".about-us"
+    });
+});
+
+ document.getElementById("menu").addEventListener("click", function () {
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: ".menu-container"
+    });
+});
+
+ document.getElementById("testinomials").addEventListener("click", function () {
+    gsap.to(window, {
+      duration: 2,
+      scrollTo: ".testinomials-container"
+    });
+});
+
+ document.getElementById("gallery").addEventListener("click", function () {
+    gsap.to(window, {
+      duration: 2,
+      scrollTo: ".gallery"
+    });
+});
+
+ 
+
+
+     
+    
+
+</script>
+
+</body>
+</html>
