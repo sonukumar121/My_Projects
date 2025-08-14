@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+ 
+   
+  <style>
+  button{
+  height:10vw;
+  width:10vw;
+
+
+  }
+
+  html, body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+
+  * {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+  .container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+   
+     
+  }
+ 
+  .btn{
+   display:flex;
+   width:max-content;
+   /* border:2px solid; */
+   border:none;
+   
+  }
+
+  .btn>button
+  {
+    font-size: xx-large;
+    border-radius: 1vw;
+    cursor: pointer;
+  }
+  
+  body{
+     
+     background-repeat: no-repeat;
+  }
+
+  
+
+  #reset{
+    border-radius: 1vw;
+    background-color: black;
+    color:white;
+    height: 2vw;
+    margin-top: 3vw;
+    cursor: pointer;
+  }
+
+ 
+
+  /* 1. Mobile devices (portrait) */
+@media only screen and (max-width: 426px) 
+{
+  body {
+        background: linear-gradient(orange,white,green);
+  }
+
+  #win{
+    font-size: 7.5vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .but{
+  height:25vw;
+  width:25vw;
+
+
+  }
+
+    
+  #reset{
+    border-radius: 1vw;
+    background-color: black;
+    color:white;
+    height: 10vw;
+    width:40vw;
+    margin-top: 20vw;
+    cursor: pointer;
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (min-width: 427px) and (max-width:767px)
+{
+
+    body {
+        background: linear-gradient(orange,white,green);
+  }
+  #win{
+    font-size: 7.5vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .but{
+  height:25vw;
+  width:25vw;
+
+
+  }
+
+    
+  #reset{
+    border-radius: 1vw;
+    background-color: black;
+    color:white;
+    height: 10vw;
+    width:40vw;
+    margin-top: 20vw;
+    cursor: pointer;
+    font-size: 4vw;
+  }
+}
+
+
+
+/* 3. Tablets and small desktops */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+        background: linear-gradient(orange,white,green);
+  }
+ 
+
+    #win{
+    font-size: 9.5vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .but{
+  height:25vw;
+  width:25vw;
+
+
+  }
+
+  
+  #reset{
+    border-radius: 1vw;
+    background-color: black;
+    color:white;
+    height: 10vw;
+    width:40vw;
+    margin-top: 20vw;
+    cursor: pointer;
+    font-size: 4vw;
+  }
+
+}
+
+/* 4. Large desktops and laptops */
+@media only screen and (min-width: 1025px) and (max-width: 1320px){
+  body {
+    background: linear-gradient(orange,white,green);
+  }
+
+
+    #win{
+    font-size: 8.5vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .but{
+  height:20vw;
+  width:20vw;
+
+
+  }
+
+  
+  #reset{
+    border-radius: 1vw;
+    background-color: black;
+    color:white;
+    height: 7vw;
+    width:35vw;
+    margin-top: 20vw;
+    cursor: pointer;
+    font-size: 4vw;
+  }
+
+
+
+}
+
+@media only screen and (min-width: 1321px) and (max-width: 2560px)
+{
+ body {
+    background: linear-gradient(orange,white,green);
+  }
+
+
+    #win{
+    font-size: 4.5vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .but{
+  height:10vw;
+  width:10vw;
+  background-color: white;
+
+
+  }
+
+  
+  #reset{
+    border-radius: 1vw;
+    background-color: black;
+    color:white;
+    height: 3vw;
+    width:25vw;
+    margin-top: 5vw;
+    cursor: pointer;
+    font-size: 2vw;
+  }
+
+
+}
+
+.but:disabled {
+  background-color: white !important;
+  color: black;
+  opacity: 1;
+  cursor:pointer;
+  border-color: black;
+}
+
+  </style>
+</head>
+<body>
+    <!-- <h1 id="win"style="text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Tic-Toe Game</h1> -->
+  <div class="container">
+        <h1 id="win"style="text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Tic-Toe Game</h1>
+
+      <div class="btn">
+        <button class="but"></button>
+        <button class="but"></button>
+        <button class="but"></button>
+      </div>
+
+      <div class="btn">
+        <button class="but"></button>
+        <button class="but"></button>
+        <button class="but"></button>
+      </div>
+
+      <div class="btn">
+        <button class="but"></button>
+        <button class="but"></button>
+        <button class="but"></button>
+      </div>
+
+      <div id="reset-btn">
+            <button id="reset">Reset</button>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <script>
+let count = 1;
+const reset = document.getElementById('reset');
+const winner = document.getElementById('win');
+const elements = document.querySelectorAll('.but');
+
+// Reset button event (loop के बाहर)
+reset.addEventListener('click', function () {
+    location.reload();
+});
+
+// Check winner function
+function checkWinner() {
+    const winPatterns = [
+        [0,1,2], [3,4,5], [6,7,8], // rows
+        [0,3,6], [1,4,7], [2,5,8], // columns
+        [0,4,8], [2,4,6]           // diagonals
+    ];
+
+    for (let pattern of winPatterns) {
+        const [a, b, c] = pattern;
+        if (
+            elements[a].innerText &&
+            elements[a].innerText === elements[b].innerText &&
+            elements[a].innerText === elements[c].innerText
+        ) {
+            return elements[a].innerText;
+        }
+    }
+    return null;
+}
+
+// Check draw function
+function checkDraw() {
+    return [...elements].every(btn => btn.innerText !== "");
+}
+
+// Button click logic
+elements.forEach(btn => {
+    btn.addEventListener('click', function () {
+        if (this.innerText !== "") return; // Already clicked
+
+        if (count === 1) {
+            this.innerText = "X";
+            count = 0;
+        } else {
+            this.innerText = "O";
+            count = 1;
+        }
+        this.disabled = true;
+
+        const winnerSymbol = checkWinner();
+        if (winnerSymbol === "X") {
+            winner.innerText = "Congratulations! YOU WIN";
+            elements.forEach(b => b.disabled = true);
+        } else if (winnerSymbol === "O") {
+            winner.innerText = "Sorry! YOU LOST Try again?";
+            elements.forEach(b => b.disabled = true);
+        } else if (checkDraw()) {
+            winner.innerText = "Draw game! Well played both.";
+        }
+    });
+});
+</script>
+  
+</body>
+</html>
