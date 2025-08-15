@@ -1,9 +1,11 @@
-
+<!-- DUAL CALCULATOR FEATURE PROJECT -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Math.js Test</title>
     <style>
         /* *{
@@ -11,176 +13,452 @@
             padding:0;
         } */
 
-       body{
-             background:linear-gradient( 210deg,#2E3844,#1F2328);
-             /* background-repeat: no-repeat; */
+/* Small phones (320px – 375px width) */
+@media (max-width: 375px) 
+{
+   
+
+    body{
+        overflow-x: hidden !important;
+        overflow-y: hidden !important;
+        /* background: red !important; */
+    }
+  
+
+   #text 
+   {
+      height: 18vw !important;
+      width: 75vw !important;
+      font-size: 10vw !important;
+   }
+
+
+     .btn>button {
+            border-radius: 50vw;
+            height: 18vw !important;
+
+            width: 18vw !important;
+            background: linear-gradient(#2E3844, #1F2328);
+            /* color:white; */
+            font-size: 5vw  !important;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border: none;
+            box-shadow: 0 -0.3vw 0.9vw rgb(84, 82, 82);
+            /* shadow upar */
+            transition: all 0 ease;
+
         }
 
-        .calci{
+
+
+}
+
+
+/* Medium phones (376px – 425px width) */
+@media (min-width: 375px) and (max-width: 426px)
+ {
+    
+   #text 
+   {
+      height: 18vw !important;
+      width: 65vw !important;
+      font-size: 10vw !important;
+   }
+
+
+     .btn>button {
+            border-radius: 50vw;
+            height: 15vw !important;
+
+            width: 16vw !important;
+            background: linear-gradient(#2E3844, #1F2328);
+            /* color:white; */
+            font-size: 5vw  !important;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border: none;
+            box-shadow: 0 -0.3vw 0.9vw rgb(84, 82, 82);
+            /* shadow upar */
+            transition: all 0 ease;
+
+        }
+
+}
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* DONE */
+
+
+/* Large phones (426px – 768px width) */
+@media (min-width: 426px) and (max-width: 565px)
+ {
+
+    
+   #text 
+   {
+      height: 18vw !important;
+      width: 65vw !important;
+      font-size: 10vw !important;
+   }
+
+
+     .btn>button {
+            border-radius: 50vw;
+            height: 15vw !important;
+
+            width: 16vw !important;
+            background: linear-gradient(#2E3844, #1F2328);
+            /* color:white; */
+            font-size: 5vw  !important;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border: none;
+            box-shadow: 0 -0.3vw 0.9vw rgb(84, 82, 82);
+            /* shadow upar */
+            transition: all 0 ease;
+
+        }
+
+   
+}
+
+
+/* Tablets / small desktops (769px – 1024px width) */
+@media (min-width: 566px) and (max-width: 765px) 
+{
+    
+   #text 
+   {
+      height: 10vw !important;
+      width: 45vw !important;
+      font-size: 6vw !important;
+   }
+
+
+     .btn>button {
+            border-radius: 50vw;
+            height: 10vw !important;
+
+            width: 10vw !important;
+            background: linear-gradient(#2E3844, #1F2328);
+            /* color:white; */
+            font-size: 3vw  !important;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border: none;
+            box-shadow: 0 -0.3vw 0.9vw rgb(84, 82, 82);
+            /* shadow upar */
+            transition: all 0 ease;
+
+        }
+
+}
+
+@media (min-width: 765px) and (max-width: 1024px) 
+{
+      #text 
+   {
+      height: 10vw !important;
+      width: 38vw !important;
+      font-size: 10vw !important;
+   }
+
+
+     .btn>button {
+            border-radius: 50vw;
+            height: 8vw !important;
+
+            width: 8vw !important;
+            background: linear-gradient(#2E3844, #1F2328);
+            /* color:white; */
+            font-size: 3vw  !important;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border: none;
+            box-shadow: 0 -0.3vw 0.9vw rgb(84, 82, 82);
+            /* shadow upar */
+            transition: all 0 ease;
+
+        }
+}
+
+
+/* Large desktops (1025px and above) */
+@media (min-width: 1025px) 
+{
+     #text 
+   {
+      height: 10vw !important;
+      width: 38vw !important;
+      font-size: 10vw !important;
+   }
+
+
+     .btn>button {
+            border-radius: 50vw;
+            height: 8vw !important;
+
+            width: 8vw !important;
+            background: linear-gradient(#2E3844, #1F2328);
+            /* color:white; */
+            font-size: 3vw  !important;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border: none;
+            box-shadow: 0 -0.3vw 0.9vw rgb(84, 82, 82);
+            /* shadow upar */
+            transition: all 0 ease;
+
+        }
+}
+
+
+
+
+
+
+
+
+        body {
+            background: linear-gradient(210deg, #2E3844, #1F2328);
+            /* background-repeat: no-repeat; */
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        .calci {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap:2.4vw;
+            gap: 2.4vw;
             border-radius: 2vw;
             padding-left: 3vw;
             padding-right: 3vw;
             padding-bottom: 3vw;
-            box-shadow: 0 0.5vw 0.9vw rgb(84, 82, 82); /* shadow added */
-            
+            box-shadow: 0 0.7vw 0.9vw rgb(84, 82, 82);
+            /* shadow added */
+
 
         }
 
-        .btn{
+        .btn {
             display: flex;
             /* padding-top: 2vw; */
             /* border:2px solid red; */
-            gap:2vw;
-            
+            gap: 2vw;
+
         }
 
-       .container{
+        .container {
             display: flex;
             justify-content: center;
             align-items: center;
-           
+
         }
 
-        .btn>button{
+
+
+        .btn-green {
+            color: #29d71d;
+            /* bright neon green */
+        }
+
+        .btn>button {
             border-radius: 50vw;
-             height:4.2vw;
-            width:4.4vw;
-             background:linear-gradient(#2E3844,#1F2328);
-            color:white;
+            height: 4.2vw;
+            width: 4.4vw;
+            background: linear-gradient(#2E3844, #1F2328);
+            /* color:white; */
             font-size: 1.5vw;
-             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             border: none;
-            box-shadow: 0 -0.3vw 0.9vw rgb(84, 82, 82); /* shadow upar */
-            transition:all 0.3 ease;
-            
+            box-shadow: 0 -0.3vw 0.9vw rgb(84, 82, 82);
+            /* shadow upar */
+            transition: all 0 ease;
+
         }
 
-        #text{
-          height: 2vw;
-          width:24vw;
-          padding-top:3vw ;
-          background-color: black;
-          overflow-y: hidden;
-          overflow-y: hidden;
-         /* visibility: hidden; Yeh use karo */
-          border: none;
-           resize: none; /* User resize nahi kar sakta */
-           color:white;
-           font-size: 3vw;
-          
+        #text {
+            height: 4vw;
+            width: 24vw;
+            padding-top: 3vw;
+            background-color: black;
+            overflow-y: hidden;
+            overflow-y: hidden;
+            /* visibility: hidden; Yeh use karo */
+            border: none;
+            resize: none;
+            /* User resize nahi kar sakta */
+            color: white;
+            font-size: 3vw;
+
         }
 
-        .txt_area
-        {
+        .txt_area {
             padding-top: 7vw;
-            cursor:pointer;
-            
+            cursor: pointer;
+
         }
-         
-      
-        .btn-green
-        {
-            color: rgb(9, 237, 9);
+
+
+        #btn-orange {
+            background: rgb(255, 163, 5) !important;
+            color: white;
+        }
+
+        .btn>button:active {
+            transform: translateY(0.1vw);
+            box-shadow: 0 0.1vw 0.3vw rgb(50, 50, 50) inset;
+        }
+
+        .num {
+            color: white;
+        }
+
+        #star,
+        #sub,
+        #add {
+            font-size: 2.3vw;
         }
 
         #btn-orange {
-    background: rgb(255, 163, 5) !important;
-    color: white;
-}
-
-.btn>button:active {
-    transform: translateY(0.3vw); 
-    box-shadow: 0 0.1vw 0.3vw rgb(50,50,50) inset;
-}
-   
-
-        
+            font-size: 2.3vw;
+        }
     </style>
 </head>
+
 <body>
     <div class="container" style="height: 100vh;">
 
-    
+
         <div class="calci" style="border:2px solid rgb(87, 85, 85); max-width: fit-content;">
             <div class="txt_area"><textarea name="" id="text"></textarea></div>
 
-           <div class="btn" >
-             <button class="btn-green" class="ac">AC</button>
-            <button class="btn-green" class="del">DEL</button>
-            <button class="btn-green">%</button>
-            <button class="btn-green">/</button>
-           </div>
-
-             
-           <div class="btn">
-             <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button id="btn-green">*</button>
-           </div>
-
-             
-           <div class="btn">
-             <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button id="btn-green">-</button>
-           </div>
-
-             
-           <div class="btn">
-             <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button id="btn-green">+</button>
-           </div>
+            <div class="btn">
+                <button class="btn-green " id="ac">AC</button>
+                <button class="btn-green" id="del"> DEL</button>
+                <button class="btn-green n">%</button>
+                <button class="btn-green n">/</button>
+            </div>
 
 
-             <div class="btn">
-             <button>00</button>
-            <button>0</button>
-            <button>.</button>
-            <button id="btn-orange">=</button>
-           </div>
+            <div class="btn">
+                <button class="num n">7</button>
+                <button class="num n">8</button>
+                <button class="num n">9</button>
+                <button class="btn-green  n" id="star">*</button>
+            </div>
+
+
+            <div class="btn">
+                <button class="num n">4</button>
+                <button class="num  n">5</button>
+                <button class="num  n">6</button>
+                <button class="btn-green  n" id="sub">-</button>
+            </div>
+
+
+            <div class="btn">
+                <button class="num  n">1</button>
+                <button class="num  n">2</button>
+                <button class="num  n">3</button>
+                <button class="btn-green  n" id="add">+</button>
+            </div>
+
+
+            <div class="btn">
+                <button class="num  n">00</button>
+                <button class="num  n">0</button>
+                <button class="num  n">.</button>
+                <button id="btn-orange">=</button>
+            </div>
         </div>
 
-      </div>  
-       
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.js"></script>
+    </div>
 
-      <script>
-       let  txtbtn=document.getElementById('text');
-        txtbtn.addEventListener('input',function()
-        {
-           let ans=console.log(txtbtn.value); 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.js"></script>
+
+    <script>
+
+        //calculation part
+        let num, num2, ope;
+        let sum;
+        input = document.getElementById('text');
+        input.addEventListener('input', function () {
+            num = input.value;
+            try {
+                sum = math.evaluate(num);
+            } catch (err) {
+                sum = "invalid"; // agar invalid expression ho to empty
+                // console.log('Invalid expression');
+            }
         });
-        
-        console.log(math.evaluate("ans"));
-
-        //   logic
-        
-      </script>
 
 
+        // output  part
+        equalbtn = document.getElementById('btn-orange');
+        equalbtn.addEventListener('click', function () {
+            input.value = sum;
+        });
 
 
 
-<!-- 
-<!-- 
-    <!-- Math.js library load -->
-  
 
-    <!-- अब math.js load हो चुका है, यहाँ अपना code लिखो -->
-    <!-- <script>
-        console.log(math.evaluate("2 + 3 * 4")); // 14
-        console.log(math.sqrt(16)); // 4
-        console.log(math);
-    </script>  -->
+        // button operation 
+        btnlist = document.getElementsByClassName('n');
+
+        let inputbt, numbe,add,equalbtnn;
+        for (let i = 0; i < btnlist.length; i++)
+         {
+            btnlist[i].addEventListener('click', function () {
+                inputbt = btnlist[i];
+                // console.log(inputbt.textContent);
+                text.value += inputbt.textContent;
+                numbe = text.value;
+                // 
+
+                try {
+                    add = math.evaluate(numbe);
+                } catch (err) {
+                    
+                    
+                    add= "invalid "; // agar invalid expression ho to empty
+                    
+                    // console.log('Invalid expression');
+                }
+
+            });
+
+
+             equalbtnn = document.getElementById('btn-orange');
+        equalbtnn.addEventListener('click', function () {
+            input.value = add;
+        });
+        }
+
+
+
+
+
+
+
+            acbtn=document.getElementById('ac');
+            delbtn=document.getElementById('del');   
+            acbtn.addEventListener('click',function()
+            {
+                input.value="";
+            });
+
+
+              delbtn.addEventListener('click',function()
+            {
+                
+                 input.value = input.value.slice(0, -1); 
+            });
+
+    </script>
+
+
+
+
+
+    
 
 </body>
-</html>
+
+</html> 
