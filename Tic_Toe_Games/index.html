@@ -1,412 +1,355 @@
-<!-- DUAL CALCULATOR FEATURE PROJECT -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Math.js Test</title>
-    <style>
-        /* *{
-            margin: 0;
-            padding:0;
-        } */
-
-
-@media (max-width: 375px) 
-{
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+ 
    
+  <style>
+  button{
+  height:10vw;
+  width:10vw;
 
-    body{
-        overflow-x: hidden !important;
-        overflow-y: hidden !important;
-        
-    }
+
+  }
+
+  html, body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+
+  * {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+  .container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+   
+     
+  }
+ 
+  .btn{
+   display:flex;
+   width:max-content;
+   /* border:2px solid; */
+   border:none;
+   
+  }
+
+  .btn>button
+  {
+    font-size: xx-large;
+    border-radius: 1vw;
+    cursor: pointer;
+  }
+  
+  body{
+     
+     background-repeat: no-repeat;
+  }
+
   
 
-   #text 
-   {
-      height: 18vw !important;
-      width: 75vw !important;
-      font-size: 10vw !important;
-   }
+  #reset{
+    border-radius: 1vw;
+    background-color: black;
+    color:white;
+    height: 2vw;
+    margin-top: 3vw;
+    cursor: pointer;
+  }
+
+ 
+
+  /* 1. Mobile devices (portrait) */
+@media only screen and (max-width: 426px) 
+{
+  body {
+        background: linear-gradient(orange,white,green);
+  }
+
+  #win{
+    font-size: 7.5vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .but{
+  height:25vw;
+  width:25vw;
 
 
-     .btn>button {
-            border-radius: 50vw;
-            height: 18vw !important;
-
-            width: 18vw !important;
-            background: linear-gradient(#2E3844, #1F2328);
-            /* color:white; */
-            font-size: 5vw  !important;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            border: none;
-            box-shadow: 0 -0.3vw 0.9vw rgb(84, 82, 82);
-            /* shadow upar */
-            transition: all 0 ease;
-
-        }
-
-
-
-}
-
-
-@media (min-width: 375px) and (max-width: 426px)
- {
-    
-   #text 
-   {
-      height: 18vw !important;
-      width: 65vw !important;
-      font-size: 10vw !important;
-   }
-
-
-     .btn>button {
-            border-radius: 50vw;
-            height: 15vw !important;
-
-            width: 16vw !important;
-            background: linear-gradient(#2E3844, #1F2328);
-            /* color:white; */
-            font-size: 5vw  !important;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            border: none;
-            box-shadow: 0 -0.3vw 0.9vw rgb(84, 82, 82);
-            /* shadow upar */
-            transition: all 0 ease;
-
-        }
-
-}
-
-@media (min-width: 426px) and (max-width: 565px)
- {
+  }
 
     
-   #text 
-   {
-      height: 18vw !important;
-      width: 65vw !important;
-      font-size: 10vw !important;
-   }
-
-
-     .btn>button {
-            border-radius: 50vw;
-            height: 15vw !important;
-
-            width: 16vw !important;
-            background: linear-gradient(#2E3844, #1F2328);
-            /* color:white; */
-            font-size: 5vw  !important;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            border: none;
-            box-shadow: 0 -0.3vw 0.9vw rgb(84, 82, 82);
-            /* shadow upar */
-            transition: all 0 ease;
-
-        }
-
-   
+  #reset{
+    border-radius: 1vw;
+    background-color: black;
+    color:white;
+    height: 10vw;
+    width:40vw;
+    margin-top: 20vw;
+    cursor: pointer;
+    font-size: 4vw;
+  }
 }
 
-
-@media (min-width: 566px) and (max-width: 765px) 
+@media only screen and (min-width: 427px) and (max-width:767px)
 {
+
+    body {
+        background: linear-gradient(orange,white,green);
+  }
+  #win{
+    font-size: 7.5vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .but{
+  height:25vw;
+  width:25vw;
+
+
+  }
+
     
-   #text 
-   {
-      height: 10vw !important;
-      width: 45vw !important;
-      font-size: 6vw !important;
-   }
+  #reset{
+    border-radius: 1vw;
+    background-color: black;
+    color:white;
+    height: 10vw;
+    width:40vw;
+    margin-top: 20vw;
+    cursor: pointer;
+    font-size: 4vw;
+  }
+}
 
 
-     .btn>button {
-            border-radius: 50vw;
-            height: 10vw !important;
 
-            width: 10vw !important;
-            background: linear-gradient(#2E3844, #1F2328);
-            /* color:white; */
-            font-size: 3vw  !important;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            border: none;
-            box-shadow: 0 -0.3vw 0.9vw rgb(84, 82, 82);
-            /* shadow upar */
-            transition: all 0 ease;
+/* 3. Tablets and small desktops */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+        background: linear-gradient(orange,white,green);
+  }
+ 
 
-        }
+    #win{
+    font-size: 9.5vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .but{
+  height:25vw;
+  width:25vw;
+
+
+  }
+
+  
+  #reset{
+    border-radius: 1vw;
+    background-color: black;
+    color:white;
+    height: 10vw;
+    width:40vw;
+    margin-top: 20vw;
+    cursor: pointer;
+    font-size: 4vw;
+  }
 
 }
 
-@media (min-width: 765px) and (max-width: 1024px) 
+/* 4. Large desktops and laptops */
+@media only screen and (min-width: 1025px) and (max-width: 1320px){
+  body {
+    background: linear-gradient(orange,white,green);
+  }
+
+
+    #win{
+    font-size: 8.5vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .but{
+  height:20vw;
+  width:20vw;
+
+
+  }
+
+  
+  #reset{
+    border-radius: 1vw;
+    background-color: black;
+    color:white;
+    height: 7vw;
+    width:35vw;
+    margin-top: 20vw;
+    cursor: pointer;
+    font-size: 4vw;
+  }
+
+
+
+}
+
+@media only screen and (min-width: 1321px) and (max-width: 2560px)
 {
-      #text 
-   {
-      height: 10vw !important;
-      width: 38vw !important;
-      font-size: 10vw !important;
-   }
+ body {
+    background: linear-gradient(orange,white,green);
+  }
 
 
-     .btn>button {
-            border-radius: 50vw;
-            height: 8vw !important;
+    #win{
+    font-size: 4.5vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
 
-            width: 8vw !important;
-            background: linear-gradient(#2E3844, #1F2328);
-            /* color:white; */
-            font-size: 3vw  !important;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            border: none;
-            box-shadow: 0 -0.3vw 0.9vw rgb(84, 82, 82);
-            /* shadow upar */
-            transition: all 0 ease;
+  .but{
+  height:10vw;
+  width:10vw;
+  background-color: white;
 
-        }
+
+  }
+
+  
+  #reset{
+    border-radius: 1vw;
+    background-color: black;
+    color:white;
+    height: 3vw;
+    width:25vw;
+    margin-top: 5vw;
+    cursor: pointer;
+    font-size: 2vw;
+  }
+
+
 }
 
-
-@media (min-width: 1025px) 
-{
-     #text 
-   {
-      height: 10vw !important;
-      width: 38vw !important;
-      font-size: 10vw !important;
-   }
-
-
-     .btn>button {
-            border-radius: 50vw;
-            height: 8vw !important;
-
-            width: 8vw !important;
-            background: linear-gradient(#2E3844, #1F2328);
-            /* color:white; */
-            font-size: 3vw  !important;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            border: none;
-            box-shadow: 0 -0.3vw 0.9vw rgb(84, 82, 82);
-            /* shadow upar */
-            transition: all 0 ease;
-
-        }
+.but:disabled {
+  background-color: white !important;
+  color: black;
+  opacity: 1;
+  cursor:pointer;
+  border-color: black;
 }
 
-
-
-
-
-
-
-
-        body {
-            background: linear-gradient(210deg, #2E3844, #1F2328);
-            /* background-repeat: no-repeat; */
-            overflow-x: hidden;
-            overflow-y: hidden;
-        }
-
-        .calci {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 2.4vw;
-            border-radius: 2vw;
-            padding-left: 3vw;
-            padding-right: 3vw;
-            padding-bottom: 3vw;
-            box-shadow: 0 0.7vw 0.9vw rgb(84, 82, 82);
-            /* shadow added */
-
-
-        }
-
-        .btn {
-            display: flex;
-            /* padding-top: 2vw; */
-            /* border:2px solid red; */
-            gap: 2vw;
-
-        }
-
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-        }
-
-
-
-        .btn-green {
-            color: #29d71d;
-            /* bright neon green */
-        }
-
-        .btn>button {
-            border-radius: 50vw;
-            height: 4.2vw;
-            width: 4.4vw;
-            background: linear-gradient(#2E3844, #1F2328);
-            /* color:white; */
-            font-size: 1.5vw;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            border: none;
-            box-shadow: 0 -0.3vw 0.9vw rgb(84, 82, 82);
-            /* shadow upar */
-            transition: all 0 ease;
-
-        }
-
-        #text {
-            height: 4vw;
-            width: 24vw;
-            padding-top: 3vw;
-            background-color: black;
-            overflow-y: hidden;
-            overflow-y: hidden;
-            /* visibility: hidden; Yeh use karo */
-            border: none;
-            resize: none;
-            /* User resize nahi kar sakta */
-            color: white;
-            font-size: 3vw;
-
-        }
-
-        .txt_area {
-            padding-top: 7vw;
-            cursor: pointer;
-
-        }
-
-
-        #btn-orange {
-            background: rgb(255, 163, 5) !important;
-            color: white;
-        }
-
-        .btn>button:active {
-            transform: translateY(0.1vw);
-            box-shadow: 0 0.1vw 0.3vw rgb(50, 50, 50) inset;
-        }
-
-        .num {
-            color: white;
-        }
-
-        #star,
-        #sub,
-        #add {
-            font-size: 2.3vw;
-        }
-
-        #btn-orange {
-            font-size: 2.3vw;
-        }
-    </style>
+  </style>
 </head>
-
 <body>
-    <div class="container" style="height: 100vh;">
+    <!-- <h1 id="win"style="text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Tic-Toe Game</h1> -->
+  <div class="container">
+        <h1 id="win"style="text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Tic-Toe Game</h1>
 
+      <div class="btn">
+        <button class="but"></button>
+        <button class="but"></button>
+        <button class="but"></button>
+      </div>
 
-        <div class="calci" style="border:2px solid rgb(87, 85, 85); max-width: fit-content;">
-            <div class="txt_area"><textarea name="" id="text"></textarea></div>
+      <div class="btn">
+        <button class="but"></button>
+        <button class="but"></button>
+        <button class="but"></button>
+      </div>
 
-            <div class="btn">
-                <button class="btn-green " id="ac">AC</button>
-                <button class="btn-green" id="del"> DEL</button>
-                <button class="btn-green n">%</button>
-                <button class="btn-green n">/</button>
-            </div>
+      <div class="btn">
+        <button class="but"></button>
+        <button class="but"></button>
+        <button class="but"></button>
+      </div>
 
-
-            <div class="btn">
-                <button class="num n">7</button>
-                <button class="num n">8</button>
-                <button class="num n">9</button>
-                <button class="btn-green  n" id="star">*</button>
-            </div>
-
-
-            <div class="btn">
-                <button class="num n">4</button>
-                <button class="num  n">5</button>
-                <button class="num  n">6</button>
-                <button class="btn-green  n" id="sub">-</button>
-            </div>
-
-
-            <div class="btn">
-                <button class="num  n">1</button>
-                <button class="num  n">2</button>
-                <button class="num  n">3</button>
-                <button class="btn-green  n" id="add">+</button>
-            </div>
-
-
-            <div class="btn">
-                <button class="num  n">00</button>
-                <button class="num  n">0</button>
-                <button class="num  n">.</button>
-                <button id="btn-orange">=</button>
-            </div>
-        </div>
-
+      <div id="reset-btn">
+            <button id="reset">Reset</button>
+      </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.js"></script>
+
+
+
+
+
 
     <script>
+let count = 1;
+const reset = document.getElementById('reset');
+const winner = document.getElementById('win');
+const elements = document.querySelectorAll('.but');
 
-       
-    const input = document.getElementById('text');
-    const equalbtn = document.getElementById('btn-orange');
-    const acbtn = document.getElementById('ac');
-    const delbtn = document.getElementById('del');
-    const btnlist = document.getElementsByClassName('n');
+// Reset button event (loop के बाहर)
+reset.addEventListener('click', function () {
+    location.reload();
+});
 
-    // Button input logic
-    for (let i = 0; i < btnlist.length; i++) {
-        btnlist[i].addEventListener('click', function () {
-            input.value += btnlist[i].textContent;
-        });
+// Check winner function
+function checkWinner() {
+    const winPatterns = [
+        [0,1,2], [3,4,5], [6,7,8], // rows
+        [0,3,6], [1,4,7], [2,5,8], // columns
+        [0,4,8], [2,4,6]           // diagonals
+    ];
+
+    for (let pattern of winPatterns) {
+        const [a, b, c] = pattern;
+        if (
+            elements[a].innerText &&
+            elements[a].innerText === elements[b].innerText &&
+            elements[a].innerText === elements[c].innerText
+        ) {
+            return elements[a].innerText;
+        }
     }
+    return null;
+}
 
-    // Equal button logic (only one place!)
-    equalbtn.addEventListener('click', function () {
-        try {
-            input.value = math.evaluate(input.value);
-        } catch (err) {
-            input.value = "invalid";
+// Check draw function
+function checkDraw() {
+    return [...elements].every(btn => btn.innerText !== "");
+}
+
+// Button click logic
+elements.forEach(btn => {
+    btn.addEventListener('click', function () {
+        if (this.innerText !== "") return; // Already clicked
+
+        if (count === 1) {
+            this.innerText = "X";
+            count = 0;
+        } else {
+            this.innerText = "O";
+            count = 1;
+        }
+        this.disabled = true;
+
+        const winnerSymbol = checkWinner();
+        if (winnerSymbol === "X") {
+            winner.innerText = "Congratulations! YOU WIN";
+            elements.forEach(b => b.disabled = true);
+        } else if (winnerSymbol === "O") {
+            winner.innerText = "Sorry! YOU LOST Try again?";
+            elements.forEach(b => b.disabled = true);
+        } else if (checkDraw()) {
+            winner.innerText = "Draw game! Well played both.";
         }
     });
-
-    // AC button
-    acbtn.addEventListener('click', function () {
-        input.value = "";
-    });
-
-    // DEL button
-    delbtn.addEventListener('click', function () {
-        input.value = input.value.slice(0, -1);
-    });
-
+});
 </script>
-
-    </script>
-
-
-
+  
 </body>
-
 </html>
