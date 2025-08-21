@@ -1,77 +1,435 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        button {
+            font-size: 1vw;
+        }
 
-  <style>
+        body {
+            background: linear-gradient(rgb(70, 25, 128), black);
+            height: 100vh;
+            margin: 0;
+        }
 
-    *
-    {
-      margin: 0;
-      padding: 0;
-    }
-    .container{
-      display: flex;
-      flex-direction: column;
-      border:2px solid red;
-      width: 25vw;
-      height: 25vw;
-      
-      align-items: center;
-      padding-bottom: 3vw;
-      padding-top: 1vw;
-      
-    }
+        #inp {
+            background-color: black;
+            color: white;
+            border: none;
+            font-size: 1.2vw;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-    .btn{
-      display: flex;
-      /* border:2px solid green; */
-      width:20vw;
-      justify-content: center;
-      gap:2vw;
-      padding-top: 2vw;
-    }
+        #add {
+            background-color: #F97316;
+            color: white;
+            width: 8vw;
+            border: none;
+            font-size: 1.3vw;
+            padding-bottom: 2vw;
+        }
 
-    input{
-      width:20vw;
-      height: 2vw;
-      border-radius: 2vw;
-    }
+        .container {
+            width: 90% !important ;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 1vw;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            padding: 2vw;
+        }
 
-    img{
-      height: 2.3vw;
-    }
+        .boxx {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    .wpic{
-      height: 10vw;
+        /* Task Styles */
+        .task-container {
+            display: flex;
+            margin-top: 2vw;
+            align-items: center;
+            flex-wrap: wrap;
+        }
 
-    }
+        .task-input {
+            width: 26vw;
+            background: black;
+            font-size: 1.5vw;
+            color: grey;
+            border: none;
+            margin-right: 1vw;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-    .images{
-      /* border:2px solid; */
-      padding-top: 1vw;
-      width: fit-content;
-      
-    }
-  </style>
-</head>
-<body>
-    <div class="container">
-      <h1>  Weather</h1>
-        <div class="btn">
-            <input type="text">
-            <img src="search-icon.png" alt="">
-        </div>
+        .edit-btn,
+        .delete-btn {
+            background: #F97316;
+            color: white;
+            padding-bottom: 2vw;
+            font-size: 1vw;
+            margin-left: 0.5vw;
+            border: none;
+            width: 5vw;
+            
+        }
+
+        .task-checkbox {
+            margin-right: 1vw;
+        }
+
+
+
 
         
-            <img class="wpic" src="weather02.webp" alt="">
-        <div class="images">
-            <h1>24<sup>0</sup>C</h1>
-            <h2>London</h2>
 
+
+
+         @media (max-width: 375px)
+
+         {
+              #inp {
+                font-size: 3vw;
+               width:55vw !important;
+            }
+
+            .container>.head {
+                font-size: 7vw !important;
+            }
+
+            .container {
+                margin-top: 50%;
+                width: 100%;
+            }
+
+            .task-input {
+                width: 45vw;
+                font-size: 4vw;
+            }
+
+            .edit-btn
+             {
+                width: 8vw;
+                font-size: 2vw;
+                padding-bottom: 1vw;
+                height: 5.5vw !important;
+            }
+
+            .delete-btn{
+                 width: 12vw !important;
+                font-size: 2vw;
+                padding-bottom: 1vw;
+                height: 5.5vw !important;
+            }
+
+            .task-container {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            #add{
+                font-size: 3vw;
+                width: 13vw;
+            }
+
+            .task-checkbox{
+                height: 3vw;
+            }
+
+
+
+         }
+
+
+         @media (min-width: 376px) and (max-width:425px)
+
+         {
+             #inp {
+                font-size: 3vw;
+               width:55vw !important;
+            }
+
+            .container>.head {
+                font-size: 7vw !important;
+            }
+
+            .container {
+                margin-top: 50%;
+                width: 100%;
+            }
+
+            .task-input {
+                width: 45vw;
+                font-size: 4vw;
+            }
+
+            .edit-btn
+             {
+                width: 8vw;
+                font-size: 2vw;
+                padding-bottom: 1vw;
+                height: 5.5vw !important;
+            }
+
+            .delete-btn{
+                 width: 12vw !important;
+                font-size: 2vw;
+                padding-bottom: 1vw;
+                height: 5.5vw !important;
+            }
+
+            .task-container {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            #add{
+                font-size: 4vw;
+                width: 13vw;
+            }
+
+            .task-checkbox{
+                height: 3vw;
+            }
+
+         }
+
+           @media (min-width: 426px) and (max-width:768px)
+           {
+                #inp {
+                font-size: 3vw;
+               width:55vw !important;
+            }
+
+            .container>.head {
+                font-size: 7vw !important;
+            }
+
+            .container {
+                margin-top: 10%;
+                width: 100%;
+            }
+
+            .task-input {
+                width: 45vw;
+                font-size: 4vw;
+            }
+
+            .edit-btn
+             {
+                width: 8vw;
+                font-size: 2vw;
+                padding-bottom: 1vw;
+                height: 5.5vw !important;
+            }
+
+            .delete-btn{
+                 width: 12vw !important;
+                font-size: 2vw;
+                padding-bottom: 1vw;
+                height: 5.5vw !important;
+            }
+
+            .task-container {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            #add{
+                font-size: 4vw;
+                width: 13vw;
+            }
+
+            .task-checkbox{
+                height: 3vw;
+            }
+
+           }
+
+
+
+
+
+
+
+
+            @media (min-width: 769px) and (max-width:1024px)
+
+            {
+                   #inp {
+                font-size: 3vw;
+               width:55vw !important;
+            }
+
+            .container>.head {
+                font-size: 5vw !important;
+            }
+
+            .container {
+                margin-top: 10%;
+                width: 100%;
+            }
+
+            .task-input {
+                width: 45vw;
+                font-size: 4vw;
+            }
+
+            .edit-btn
+             {
+                width: 8vw;
+                font-size: 2vw;
+                padding-bottom: 1vw;
+                height: 5.5vw !important;
+            }
+
+            .delete-btn{
+                 width: 12vw !important;
+                font-size: 2vw;
+                padding-bottom: 1vw;
+                height: 5.5vw !important;
+            }
+
+            .task-container {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            #add{
+                font-size: 4vw;
+                width: 13vw;
+            }
+
+            .task-checkbox{
+                height: 3vw;
+            }
+            }
+
+
+
+
+
+
+
+
+
+        
+    </style>
+</head>
+
+<body id="body">
+    <!-- To-Do List -->
+    <div class="boxx">
+        <div id="parent" class="container"
+            style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <h1 class="head"
+                style="color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                To-Do List
+            </h1>
+
+            <div style="display: flex;">
+                <input style="width: 28vw;" id="inp" type="text" placeholder="Enter your Task">
+                <button id="add">Add</button>
+            </div>
         </div>
     </div>
+
+    <script>
+        const inp = document.getElementById('inp');
+        const addbtn = document.getElementById('add');
+        const parent = document.getElementById('parent');
+
+        addbtn.addEventListener('click', function () {
+            const input = inp.value.trim();
+
+            if (input === "") {
+                alert('Please add your task');
+                return;
+            }
+
+            const inputt = document.createElement('input');
+            const div = document.createElement('div');
+            const editbtn = document.createElement('button');
+            const delbtn = document.createElement('button');
+            const check = document.createElement('input');
+            const savebtn=document.createElement('button');
+
+            // Apply classes
+            inputt.value = input;
+            inp.value = "";
+            inputt.disabled = true;
+            inputt.classList.add('task-input');
+
+            editbtn.innerText = "Edit";
+            editbtn.classList.add('edit-btn');
+
+            delbtn.innerText = "Delete";
+            delbtn.classList.add('delete-btn');
+
+            check.type = "checkbox";
+            check.classList.add('task-checkbox');
+
+            div.classList.add('task-container');
+
+            // Append elements
+            div.appendChild(check);
+            div.appendChild(inputt);
+            div.appendChild(editbtn);
+            div.appendChild(delbtn);
+            
+
+            parent.appendChild(div);
+
+            // Edit functionality
+            editbtn.addEventListener('click', function () 
+            
+            {
+                inputt.disabled = !inputt.disabled;
+                inputt.focus();
+
+              
+            // div.appendChild(savebtn);
+           
+           
+
+
+            });
+            
+
+
+
+
+            // Delete functionality
+            delbtn.addEventListener('click', function () {
+               const response= prompt("Are you Sure Want to delete your task: type 'Yes' or 'No'");
+
+                
+               if(response=="yes" || response=="Yes" || response=="YES")
+               {
+                   div.remove();
+                    alert('Your task is deleted Sucessfully');
+               }
+
+               
+               
+            });
+
+            // Checkbox strike-through functionality
+            check.addEventListener('click', function () {
+                if (inputt.style.textDecoration === "line-through") {
+                    inputt.style.textDecoration = "none";
+                } else {
+                    inputt.style.textDecoration = "line-through";
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>
