@@ -1,208 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        button {
-            width: 3vw;
-            height: 2vw;
-            padding: 10px;
-            font-size: 1vw;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 
-        body{
-            background: linear-gradient(rgb(70, 25, 128),black);
-            height: 100vh;
-        }
+  <style>
 
-        #inp{
-            background-color: black;
-            color:white;
-            /* border-radius: 2vw; */
-            border:none;
-            font-size: 1.2vw;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-           
-            
-        }
-
-        #add{
-            background-color: #F97316;
-            color:white;
-            
-            width:8vw;
-            border:none;
-            font-size: 1.3vw;
-            padding-bottom: 2vw;
-            /* border-radius: 2vw; */
-        }
-
-
-
+    *
+    {
+      margin: 0;
+      padding: 0;
+    }
+    .container{
+      display: flex;
+      flex-direction: column;
+      border:2px solid red;
+      width: 25vw;
+      height: 25vw;
       
-
-        
-           .container {
-    width: 40%;
-    background: rgba(255, 255, 255, 0.1); /* semi-transparent */
-    border-radius: 1vw;
-    backdrop-filter: blur(10px); /* background blur */
-    -webkit-backdrop-filter: blur(10px); /* for Safari */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* subtle border */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* soft shadow */
-    padding: 2vw;
-}
-
-        
+      align-items: center;
+      padding-bottom: 3vw;
+      padding-top: 1vw;
       
+    }
 
-        .boxx{
-            /* border:2px solid; */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            /* height:100 ; */
-        }
+    .btn{
+      display: flex;
+      /* border:2px solid green; */
+      width:20vw;
+      justify-content: center;
+      gap:2vw;
+      padding-top: 2vw;
+    }
 
+    input{
+      width:20vw;
+      height: 2vw;
+      border-radius: 2vw;
+    }
 
+    img{
+      height: 2.3vw;
+    }
 
-    </style>
+    .wpic{
+      height: 10vw;
+
+    }
+
+    .images{
+      /* border:2px solid; */
+      padding-top: 1vw;
+      width: fit-content;
+      
+    }
+  </style>
 </head>
-
-<body id="body">
-    <!-- to do list -->
-  <div class="boxx">
-
-    
-    <div id="parent" class="container"
-        style="display: flex; flex-direction: column;align-items: center;justify-content: center;">
-        <h1 style="color:rgb(255, 255, 255);font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">To-Do-List</h1>
-
-        <div style="display: flex;"> <input style="width: 28vw;" id="inp" type="text" placeholder="Enter your Task">
-            <button id="add">Add</button>
+<body>
+    <div class="container">
+      <h1>  Weather</h1>
+        <div class="btn">
+            <input type="text">
+            <img src="search-icon.png" alt="">
         </div>
 
-        <!-- <div style="display: flex;"> 
-            <input style="width: 20vw;"id="inp" type="text" placeholder="Enter your Task">
-                <button>Edit</button>
-                <button>Del</button>
+        
+            <img class="wpic" src="weather02.webp" alt="">
+        <div class="images">
+            <h1>24<sup>0</sup>C</h1>
+            <h2>London</h2>
+
         </div>
-         -->
-
-
     </div>
- </div>    
-
-    <script>
-        const inp = document.getElementById('inp');
-        const addbtn = document.getElementById('add');
-        const parent = document.getElementById('parent');
-        // const window=document.getElementById('body');
-
-
-        addbtn.addEventListener('click', function () {
-            const input = inp.value;
-
-            if (input == "") {
-                alert('please add your task');
-                return;
-            }
-
-            // create only element
-            const inputt = document.createElement('input');
-            const div = document.createElement('div');
-            const editbtn = document.createElement('button');
-            const delbtn = document.createElement('button');
-            const check=document.createElement('input');
-
-
-
-
-            //   style only
-            inputt.value = input;
-            inp.value = "";
-            inputt.style.width = "26vw";
-            inputt.style.background="black";
-            inputt.disabled = true;
-            inputt.style.fontSize = "1.5vw";  // ✅ apply font size here
-            inputt.style.color="grey";
-            // inputt.value.fontSize="1.5vw";
-            div.style.display = "flex";
-            div.style.marginTop="2vw";
-            div.style.fontSize="5vw";
-
-            editbtn.innerText = "Edit";
-            editbtn.style.background="white";
-            editbtn.style.color="white";
-            // editbtn.style.padding-bottom="2vw";
-            editbtn.style.paddingBottom="2vw";
-            editbtn.style.background="#F97316";
-            editbtn.style.width="4vw";
-
-
-            delbtn.innerText = "Delete";
-            delbtn.style.color="white";
-            delbtn.style.background="#F97316";
-            delbtn.style.paddingBottom="2vw";
-            delbtn.style.width="5vw";
-
-
-            check.type="checkbox";
-            check.style.borderRadius="50%";
-            check.style.background="none";
-
-            div.appendChild(check);
-            div.appendChild(inputt);
-            div.appendChild(editbtn);
-            div.appendChild(delbtn);
-             
-
-            parent.appendChild(div);
-
-
-            editbtn.addEventListener('click', function () {
-                // toggle btn
-                if (inputt.disabled == true) {
-                    inputt.disabled = false;
-                }
-                else {
-                    inputt.disabled = true;
-                }
-
-            });
-
-
-
-            delbtn.addEventListener('click', function () {
-                div.remove();
-            });
-
-
-
-            check.addEventListener('click',function()
-            {
-                if( inputt.style.textDecoration=="line-through")
-            {
-                inputt.style.textDecoration="none";
-            }
-
-            else{
-                inputt.style.textDecoration="line-through";
-            }
-               
-            });
-
-
-        });
-
-        //div create and add dynamically edit and remove buttn.
-
-
-
-    </script>
 </body>
-
 </html>
